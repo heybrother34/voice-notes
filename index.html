@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#0d0d10" />
+    <title>Voice Notes</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="shell">
+      <header class="topbar"><div class="brand"><span class="brand-mark">◉</span><span>VOICE / NOTES</span></div><span class="status"><i></i> PRIVATE ARCHIVE</span></header>
+      <section class="recorder" aria-label="Voice recorder">
+        <p class="eyebrow">CAPTURE A THOUGHT</p>
+        <button id="recordButton" class="record-button" aria-label="Start recording"><span class="mic">●</span></button>
+        <div id="timer" class="timer">00:00</div>
+        <p id="recordHint" class="hint">Tap to begin recording</p>
+      </section>
+      <section id="draft" class="draft hidden" aria-live="polite">
+        <audio id="preview" controls></audio>
+        <input id="title" type="text" maxlength="120" placeholder="Give this note a title (optional)" />
+        <div class="draft-actions"><button id="discard" class="text-button">Discard</button><button id="save" class="save-button">Save note <span>↗</span></button></div>
+      </section>
+      <section class="notes-section"><div class="section-heading"><h1>Recent notes</h1><button id="refresh" class="refresh" aria-label="Refresh notes">↻</button></div><div id="notes" class="notes"><p class="empty">Your voice archive is quiet.</p></div></section>
+    </main>
+    <script type="module" src="./app.js"></script>
+  </body>
+</html>
