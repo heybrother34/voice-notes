@@ -1,4 +1,8 @@
-import { Netlify } from "@netlify/functions";
+declare const Netlify: {
+  env: {
+    get(name: string): string | undefined;
+  };
+};
 
 const driveScope = "https://www.googleapis.com/auth/drive";
 
