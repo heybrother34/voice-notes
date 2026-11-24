@@ -1,0 +1,24 @@
+[build]
+  publish = "public"
+  functions = "netlify/functions"
+
+[functions]
+  node_bundler = "esbuild"
+
+[[redirects]]
+  from = "/api/voice-notes"
+  to = "/.netlify/functions/list-voice-notes"
+  status = 200
+  methods = ["GET"]
+
+[[redirects]]
+  from = "/api/voice-notes"
+  to = "/.netlify/functions/upload-voice-note"
+  status = 200
+  methods = ["POST"]
+
+[[redirects]]
+  from = "/api/voice-notes/*"
+  to = "/.netlify/functions/get-voice-note/:splat"
+  status = 200
+  methods = ["GET"]

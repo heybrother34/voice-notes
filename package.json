@@ -1,0 +1,14 @@
+{
+  "name": "voice-notes-app",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "netlify dev",
+    "build": "netlify build",
+    "deploy": "netlify deploy --prod --site 2c948481-31ac-44ae-b8bc-e164e43a6779"
+  },
+  "devDependencies": {
+    "@netlify/functions": "latest",
+    "netlify-cli": "latest"
+  }
+}
